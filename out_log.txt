@@ -1,0 +1,84 @@
+User: I want to find houses with low crime rate.
+Generate Python code to filter houses based on low crime rate.
+To filter houses based on low crime rate, we can use boolean indexing. 
+
+Here is the Python code to filter houses based on low crime rate (considering houses with crime rate less than 0.1): 
+
+```python
+low_crime_rate = real_estate_dataframe[real_estate_dataframe['CRIM'] < 0.1]
+print(low_crime_rate)
+```
+
+This code creates a new dataframe called "low_crime_rate" that contains all rows where the crime rate is less than 0.1. The code then prints the new dataframe to show the filtered results.
+To filter houses based on low crime rate, we can use boolean indexing. 
+
+Here is the Python code to filter houses based on low crime rate (considering houses with crime rate less than 0.1): 
+
+```python
+low_crime_rate = real_estate_dataframe[real_estate_dataframe['CRIM'] < 0.1]
+print(low_crime_rate)
+```
+
+This code creates a new dataframe called "low_crime_rate" that contains all rows where the crime rate is less than 0.1. The code then prints the new dataframe to show the filtered results.
+
+low_crime_rate = real_estate_dataframe[real_estate_dataframe['CRIM'] < 0.1]
+print(low_crime_rate)
+
+        CRIM    ZN  INDUS  CHAS    NOX     RM   AGE      DIS  RAD  TAX  PTRATIO       B  LSTAT  MEDV
+0    0.00632  18.0   2.31     0  0.538  6.575  65.2   4.0900    1  296     15.3  396.90   4.98  24.0
+1    0.02731   0.0   7.07     0  0.469  6.421  78.9   4.9671    2  242     17.8  396.90   9.14  21.6
+2    0.02729   0.0   7.07     0  0.469  7.185  61.1   4.9671    2  242     17.8  392.83   4.03  34.7
+3    0.03237   0.0   2.18     0  0.458  6.998  45.8   6.0622    3  222     18.7  394.63   2.94  33.4
+4    0.06905   0.0   2.18     0  0.458  7.147  54.2   6.0622    3  222     18.7  396.90   5.33  36.2
+..       ...   ...    ...   ...    ...    ...   ...      ...  ...  ...      ...     ...    ...   ...
+354  0.04301  80.0   1.91     0  0.413  5.663  21.9  10.5857    4  334     22.0  382.80   8.05  18.2
+501  0.06263   0.0  11.93     0  0.573  6.593  69.1   2.4786    1  273     21.0  391.99   9.67  22.4
+502  0.04527   0.0  11.93     0  0.573  6.120  76.7   2.2875    1  273     21.0  396.90   9.08  20.6
+503  0.06076   0.0  11.93     0  0.573  6.976  91.0   2.1675    1  273     21.0  396.90   5.64  23.9
+505  0.04741   0.0  11.93     0  0.573  6.030  80.8   2.5050    1  273     21.0  396.90   7.88  11.9
+
+[152 rows x 14 columns]
+User: I also want the house to be next to charles river.
+Generate Python code to find a house with low crime rate next to Charles river.
+To filter houses based on low crime rate:
+
+```python
+low_crime_df = real_estate_dataframe[real_estate_dataframe['CRIM'] < 1.0]
+print(low_crime_df)
+```
+
+To find a house with low crime rate next to Charles River:
+
+```python
+low_crime_near_river_df = real_estate_dataframe[(real_estate_dataframe['CRIM'] < 1.0) & (real_estate_dataframe['CHAS'] == 1)]
+print(low_crime_near_river_df)
+```
+To filter houses based on low crime rate:
+
+```python
+low_crime_df = real_estate_dataframe[real_estate_dataframe['CRIM'] < 1.0]
+print(low_crime_df)
+```
+
+To find a house with low crime rate next to Charles River:
+
+```python
+low_crime_near_river_df = real_estate_dataframe[(real_estate_dataframe['CRIM'] < 1.0) & (real_estate_dataframe['CHAS'] == 1)]
+print(low_crime_near_river_df)
+```
+
+low_crime_df = real_estate_dataframe[real_estate_dataframe['CRIM'] < 1.0]
+print(low_crime_df)
+
+        CRIM    ZN  INDUS  CHAS    NOX     RM   AGE     DIS  RAD  TAX  PTRATIO       B  LSTAT  MEDV
+0    0.00632  18.0   2.31     0  0.538  6.575  65.2  4.0900    1  296     15.3  396.90   4.98  24.0
+1    0.02731   0.0   7.07     0  0.469  6.421  78.9  4.9671    2  242     17.8  396.90   9.14  21.6
+2    0.02729   0.0   7.07     0  0.469  7.185  61.1  4.9671    2  242     17.8  392.83   4.03  34.7
+3    0.03237   0.0   2.18     0  0.458  6.998  45.8  6.0622    3  222     18.7  394.63   2.94  33.4
+4    0.06905   0.0   2.18     0  0.458  7.147  54.2  6.0622    3  222     18.7  396.90   5.33  36.2
+..       ...   ...    ...   ...    ...    ...   ...     ...  ...  ...      ...     ...    ...   ...
+506  0.98765   0.0  12.50     0  0.561  6.980  89.0  2.0980    3  320     23.0  396.00  12.00  12.0
+507  0.23456   0.0  12.50     0  0.561  6.980  76.0  2.6540    3  320     23.0  343.00  25.00  32.0
+508  0.44433   0.0  12.50     0  0.561  6.123  98.0  2.9870    3  320     23.0  343.00  21.00  54.0
+509  0.77763   0.0  12.70     0  0.561  6.222  34.0  2.5430    3  329     23.0  343.00  76.00  67.0
+510  0.65432   0.0  12.80     0  0.561  6.760  67.0  2.9870    3  345     23.0  321.00  45.00  24.0
